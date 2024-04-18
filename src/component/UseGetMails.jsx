@@ -11,7 +11,7 @@ function useGetMails(email) {
 
       try {
         const response = await fetch(
-          `https://mailboxclient-45cc0-default-rtdb.firebaseio.com/${mail}.json`,
+          `https://mailbox-7a5a1-default-rtdb.firebaseio.com/${mail}.json`,
           {
             method: "GET",
           }

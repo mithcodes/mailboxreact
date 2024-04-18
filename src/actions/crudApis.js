@@ -4,7 +4,7 @@ function objectToArrayWithIds(obj) {
   return Object.keys(obj).map((key) => ({ ...obj[key], id: key }));
 }
 
-const url = "https://mailboxclient-45cc0-default-rtdb.firebaseio.com/";
+const url = "https://mailbox-7a5a1-default-rtdb.firebaseio.com/";
 
 // get emails -------------------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ export const getMails = async (email) => {
 
   try {
     const response = await fetch(
-      `https://mailboxclient-45cc0-default-rtdb.firebaseio.com/${mail}.json`,
+      `https://mailbox-7a5a1-default-rtdb.firebaseio.com/${mail}.json`,
       {
         method: "GET",
       }
@@ -52,7 +52,7 @@ export const sendMail = async (payload) => {
     // To reciepents
 
     const response = await fetch(
-      `https://mailboxclient-45cc0-default-rtdb.firebaseio.com/${email}/recieved.json`,
+      `https://mailbox-7a5a1-default-rtdb.firebaseio.com/${email}/recieved.json`,
       {
         method: "POST",
         headers: {
@@ -69,7 +69,7 @@ export const sendMail = async (payload) => {
     // To sender
 
     const senderResponse = await fetch(
-      `https://mailboxclient-45cc0-default-rtdb.firebaseio.com/${fromEmail}/sent.json`,
+      `https://mailbox-7a5a1-default-rtdb.firebaseio.com/${fromEmail}/sent.json`,
       {
         method: "POST",
         headers: {
@@ -95,7 +95,7 @@ export const updateMail = async (userEmail, e, stack) => {
 
   try {
     const response = await fetch(
-      `https://mailboxclient-45cc0-default-rtdb.firebaseio.com/${mail}/${stack}/${e.id}.json`,
+      `https://mailbox-7a5a1-default-rtdb.firebaseio.com/${mail}/${stack}/${e.id}.json`,
       {
         method: "PUT",
         body: JSON.stringify({ ...e, read: true }),
@@ -121,7 +121,7 @@ export const deleteteMail = async (userEmail, e, stack) => {
 
   try {
     const response = await fetch(
-      `https://mailboxclient-45cc0-default-rtdb.firebaseio.com/${mail}/${stack}/${e.id}.json`,
+      `https://mailbox-7a5a1-default-rtdb.firebaseio.com/${mail}/${stack}/${e.id}.json`,
       {
         method: "DELETE",
       }

@@ -24,7 +24,7 @@ const AuthForm = () => {
         }
 
         let response = await fetch(
-          "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCDsKmRy9uKIl5cyHAFUJc5PCGyPCMqTvo",
+          "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB0hB-418DkOP2qto-C3vofxxJ_3dzJQFs",
           {
             method: "POST",
             body: JSON.stringify({
@@ -58,7 +58,7 @@ const AuthForm = () => {
             throw new Error("Please fill all the fields for signup");
           }
           let response = await fetch(
-            "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCDsKmRy9uKIl5cyHAFUJc5PCGyPCMqTvo",
+            "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB0hB-418DkOP2qto-C3vofxxJ_3dzJQFs",
             {
               method: "POST",
               body: JSON.stringify({

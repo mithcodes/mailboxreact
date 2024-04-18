@@ -61,15 +61,7 @@ function ShowMailListItem({ mails }) {
                 >
                   Delete
                 </Button>
-                {/* <Button
-                  variant="danger"
-                  className="del_btn"
-                  onClick={() => {
-                    handleDelete(userEmail, e, stack);
-                  }}
-                >
-                  Delete
-                </Button> */}
+               
               </Col>
             </Row>
           );

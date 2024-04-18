@@ -6,8 +6,7 @@ import { getMails } from "../actions/crudApis";
 import { emailSliceActions } from "../store/store";
 
 function ShowAllMail() {
-  // const [recievedMails, setRecievedMails] = useState([]);
-  // const [sentMails, setSentMails] = useState([]);
+  
 
   const recievedMailsStore = useSelector((state) => state.email.recieved);
   const sentMailsStore = useSelector((state) => state.email.sent);

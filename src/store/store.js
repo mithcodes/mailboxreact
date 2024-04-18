@@ -48,6 +48,14 @@ const emailSlice = createSlice({
 //       state.recieved = action.payload.recieved;
 //       state.sent = action.payload.sent;
 //     },
+// const emailSlice = createSlice({
+//   initialState: emailState,
+//   name: "Email",
+//   reducers: {
+//     setMails(state, action) {
+//       state.recieved = action.payload.recieved;
+//       state.sent = action.payload.sent;
+//     },
     setActivEmail(state, action) {
       state.currentEmail = action.payload;
     },
